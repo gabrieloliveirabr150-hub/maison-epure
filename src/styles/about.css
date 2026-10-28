@@ -1,0 +1,42 @@
+.about-block__grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 56rem) {
+  .about-block__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-block--reverse .about-block__grid > :first-child {
+    order: 2;
+  }
+}
+
+.about-block__text h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+
+.about-block__text p {
+  opacity: 0.8;
+  font-size: var(--fs-lead);
+  max-width: 32rem;
+}
+
+.about-sourcing {
+  text-align: center;
+}
+
+.about-sourcing h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+
+.about-sourcing p {
+  max-width: 34rem;
+  margin-inline: auto;
+  opacity: 0.85;
+  font-size: var(--fs-lead);
+}

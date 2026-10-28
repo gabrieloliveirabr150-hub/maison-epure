@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Réservez une table à Maison Épure, Genève. Horaires d'ouverture et informations pratiques."
+    />
+    <title>Réservations — Maison Épure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/page-hero.css" />
+    <link rel="stylesheet" href="/src/styles/reservations.css" />
+  </head>
+  <body data-i18n-meta="reservations">
+    <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Aller au contenu principal</a>
+
+    <header class="site-header" data-nav>
+      <div class="site-header__inner">
+        <a class="brand" href="/index.html">
+          <span class="brand__mark">ME</span>
+          <span class="brand__name">Maison Épure</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations" aria-current="page">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitcherLabel">
+            <button type="button" data-lang-switch="fr" aria-pressed="true">FR</button>
+            <span class="lang-switch__sep" aria-hidden="true">·</span>
+            <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          </div>
+
+          <a class="btn btn--primary header-cta" href="/reservations.html" data-i18n="nav.reserveCta"
+            >Réserver une table</a
+          >
+
+          <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav aria-label="Navigation mobile">
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations" aria-current="page">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <a class="btn btn--primary" href="/reservations.html" data-i18n="nav.reserveCta">Réserver une table</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero__media media">
+          <picture>
+            <source srcset="/images/photos/reservations-hero-table.webp" type="image/webp" />
+            <img src="/images/photos/reservations-hero-table.jpg" alt="" data-i18n-attr="alt:reservations.heroImageAlt" />
+          </picture>
+        </div>
+        <div class="container page-hero__content" data-reveal>
+          <span class="eyebrow" data-i18n="reservations.eyebrow">Réservations</span>
+          <h1 data-i18n="reservations.title">Réserver une table</h1>
+          <p data-i18n="reservations.intro">
+            Nous recommandons de réserver au moins une semaine à l'avance, notamment pour les week-ends.
+          </p>
+        </div>
+      </section>
+
+      <section class="section reservations-grid">
+        <div class="container reservations-grid__inner">
+          <div class="reservations-col" data-reveal>
+            <h2 data-i18n="reservations.hoursTitle">Horaires d'ouverture</h2>
+            <ul data-hours-list></ul>
+            <p class="muted" data-i18n="reservations.hoursNote">Service unique le soir, du mardi au samedi.</p>
+
+            <div class="reservations-alt">
+              <h3 data-i18n="reservations.altTitle">Préférez nous appeler ?</h3>
+              <p data-i18n="reservations.altText">
+                Notre équipe est disponible par téléphone aux horaires d'ouverture.
+              </p>
+              <a class="btn btn--ghost-dark" data-location-phone-href href="#">
+                <span data-i18n="reservations.altCta">Appeler le restaurant</span>
+                <span aria-hidden="true">·</span>
+                <span data-location-phone-text></span>
+              </a>
+            </div>
+
+            <div class="reservations-policies">
+              <h3 data-i18n="reservations.policiesTitle">Bon à savoir</h3>
+              <ul>
+                <li data-i18n="reservations.policy1">Les tables sont conservées 15 minutes après l'heure réservée.</li>
+                <li data-i18n="reservations.policy2">
+                  Pour les groupes de 7 personnes ou plus, merci de nous contacter directement.
+                </li>
+                <li data-i18n="reservations.policy3">Toute annulation est à signaler au moins 24 heures à l'avance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reservations-col" data-reveal>
+            <h2 data-i18n="reservations.formTitle">Faire une demande de réservation</h2>
+            <form class="reservation-form" data-reservation-form>
+              <label>
+                <span data-i18n="reservations.formName">Nom complet</span>
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                <span data-i18n="reservations.formDate">Date souhaitée</span>
+                <input type="date" name="date" required />
+              </label>
+              <label>
+                <span data-i18n="reservations.formTime">Heure souhaitée</span>
+                <input type="time" name="time" required />
+              </label>
+              <label>
+                <span data-i18n="reservations.formGuests">Nombre de convives</span>
+                <input type="number" name="guests" min="1" max="20" required />
+              </label>
+              <label>
+                <span data-i18n="reservations.formNotes">Remarques (allergies, occasion particulière…)</span>
+                <textarea name="notes" rows="3"></textarea>
+              </label>
+              <button type="submit" class="btn btn--primary" data-i18n="reservations.formSubmit">
+                Envoyer la demande
+              </button>
+              <p class="form-disclaimer" data-i18n="reservations.formDisclaimer">
+                Ceci est un site de démonstration — ce formulaire ne transmet aucune réservation réelle.
+              </p>
+              <p class="form-status" data-form-status hidden></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="brand__mark">ME</span>
+          <p data-i18n="footer.tagline">Cuisine de saison, geste précis.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.navHeading">Navigation</h3>
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.infoHeading">Informations</h3>
+          <span data-i18n="footer.addressLabel">Adresse</span>
+          <address data-location-address></address>
+          <span data-i18n="footer.phoneLabel">Téléphone</span>
+          <a data-location-phone href="#"></a>
+          <span data-i18n="footer.emailLabel">Email</span>
+          <a data-location-email href="#"></a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.hoursHeading">Horaires</h3>
+          <ul data-hours-list></ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p data-i18n="footer.credit">Site conçu à des fins de portfolio — concept fictif.</p>
+        <p>© 2026 Maison Épure — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

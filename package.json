@@ -1,0 +1,15 @@
+{
+  "name": "maison-epure",
+  "version": "0.1.0",
+  "description": "Site vitrine d'un restaurant gastronomique fictif à Genève — projet portfolio OLVER.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}

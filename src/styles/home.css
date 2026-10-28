@@ -1,0 +1,137 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 92vh;
+  min-height: 92svh;
+  color: var(--color-ivory);
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  aspect-ratio: auto;
+  border-radius: 0;
+}
+
+.hero__media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(28, 26, 24, 0.15) 0%, rgba(28, 26, 24, 0.85) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-9) var(--space-8);
+  max-width: 44rem;
+}
+
+.hero__content h1 {
+  font-size: var(--fs-h1);
+  margin-block: var(--space-4) var(--space-5);
+}
+
+.hero__content p {
+  font-size: var(--fs-lead);
+  opacity: 0.9;
+  margin-bottom: var(--space-6);
+  max-width: 34rem;
+}
+
+.intro__grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 56rem) {
+  .intro__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+.intro__text h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+
+.intro__text p {
+  font-size: var(--fs-lead);
+  opacity: 0.85;
+  max-width: 34rem;
+}
+
+.highlights__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 48rem) {
+  .highlights__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.highlight__media {
+  margin-bottom: var(--space-4);
+}
+
+.highlight h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.highlight p {
+  opacity: 0.75;
+}
+
+.story__grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 56rem) {
+  .story__grid {
+    grid-template-columns: 1fr 0.8fr;
+  }
+}
+
+.story__text h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+
+.story__text p {
+  opacity: 0.85;
+  font-size: var(--fs-lead);
+  margin-bottom: var(--space-6);
+  max-width: 34rem;
+}
+
+.reserve-band {
+  background: var(--color-ivory-soft);
+  padding-block: var(--space-8);
+  text-align: center;
+}
+
+.reserve-band__inner {
+  max-width: 34rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.reserve-band h2 {
+  font-size: var(--fs-h2);
+}
+
+.reserve-band p {
+  opacity: 0.8;
+}

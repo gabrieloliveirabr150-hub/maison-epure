@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Découvrez la carte de saison de Maison Épure : entrées, plats et desserts renouvelés chaque semaine."
+    />
+    <title>La Carte — Maison Épure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/page-hero.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
+    <link rel="stylesheet" href="/src/styles/menu.css" />
+  </head>
+  <body data-i18n-meta="menu">
+    <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Aller au contenu principal</a>
+
+    <header class="site-header" data-nav>
+      <div class="site-header__inner">
+        <a class="brand" href="/index.html">
+          <span class="brand__mark">ME</span>
+          <span class="brand__name">Maison Épure</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu" aria-current="page">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitcherLabel">
+            <button type="button" data-lang-switch="fr" aria-pressed="true">FR</button>
+            <span class="lang-switch__sep" aria-hidden="true">·</span>
+            <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          </div>
+
+          <a class="btn btn--primary header-cta" href="/reservations.html" data-i18n="nav.reserveCta"
+            >Réserver une table</a
+          >
+
+          <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav aria-label="Navigation mobile">
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu" aria-current="page">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <a class="btn btn--primary" href="/reservations.html" data-i18n="nav.reserveCta">Réserver une table</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero__media media">
+          <picture>
+            <source srcset="/images/photos/menu-hero-dish.webp" type="image/webp" />
+            <img src="/images/photos/menu-hero-dish.jpg" alt="" data-i18n-attr="alt:menu.heroImageAlt" />
+          </picture>
+        </div>
+        <div class="container page-hero__content" data-reveal>
+          <span class="eyebrow" data-i18n="menu.eyebrow">La Carte</span>
+          <h1 data-i18n="menu.title">Une carte courte, au fil des saisons</h1>
+          <p data-i18n="menu.intro">
+            La carte évolue chaque semaine selon les arrivages. Voici un aperçu de notre répertoire actuel.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" data-menu-list></div>
+      </section>
+
+      <section class="section section--tight menu-note" data-reveal>
+        <div class="container">
+          <p data-i18n="menu.note">
+            Un menu dégustation est proposé chaque soir sur demande. N'hésitez pas à nous informer de toute
+            allergie ou restriction alimentaire.
+          </p>
+        </div>
+      </section>
+
+      <section class="reserve-band" data-reveal>
+        <div class="container reserve-band__inner">
+          <h2 data-i18n="menu.ctaTitle">Envie de découvrir la carte en personne ?</h2>
+          <a class="btn btn--primary" href="/reservations.html" data-i18n="menu.ctaButton">Réserver une table</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="brand__mark">ME</span>
+          <p data-i18n="footer.tagline">Cuisine de saison, geste précis.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.navHeading">Navigation</h3>
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.infoHeading">Informations</h3>
+          <span data-i18n="footer.addressLabel">Adresse</span>
+          <address data-location-address></address>
+          <span data-i18n="footer.phoneLabel">Téléphone</span>
+          <a data-location-phone href="#"></a>
+          <span data-i18n="footer.emailLabel">Email</span>
+          <a data-location-email href="#"></a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.hoursHeading">Horaires</h3>
+          <ul data-hours-list></ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p data-i18n="footer.credit">Site conçu à des fins de portfolio — concept fictif.</p>
+        <p>© 2026 Maison Épure — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+:root {
+  /* Palette */
+  --color-charcoal: #1c1a18;
+  --color-charcoal-soft: #2a2724;
+  --color-ivory: #f6f1e7;
+  --color-ivory-soft: #ece3d2;
+  --color-accent: #a9765a;
+  --color-accent-soft: rgba(169, 118, 90, 0.16);
+  --color-line: rgba(28, 26, 24, 0.12);
+  --color-line-on-dark: rgba(246, 241, 231, 0.18);
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --fs-eyebrow: 0.78rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.15rem;
+  --fs-h1: clamp(2.5rem, 5.5vw, 4.5rem);
+  --fs-h2: clamp(1.9rem, 3.4vw, 2.8rem);
+  --fs-h3: clamp(1.3rem, 2vw, 1.7rem);
+
+  /* Spacing scale — 7/8/9 are mobile-first and scale up at the breakpoint below,
+     since they drive section rhythm and should not cost the same vertical
+     space on a phone as on a desktop. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2rem;
+  --space-8: 2.75rem;
+  --space-9: 3.5rem;
+  --space-10: 9rem;
+
+  /* Layout */
+  --container-max: 1240px;
+  --container-pad: var(--space-5);
+  --radius: 2px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration: 420ms;
+  --duration-slow: 720ms;
+
+  /* Layering */
+  --z-header: 100;
+  --z-mobile-nav: 90;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+    --space-9: 6.5rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --container-pad: var(--space-7);
+  }
+}

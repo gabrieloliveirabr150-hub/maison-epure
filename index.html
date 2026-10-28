@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Maison Épure, restaurant gastronomique contemporain à Genève. Cuisine de saison, ingrédients d'exception, expérience épurée."
+    />
+    <title>Maison Épure — Restaurant gastronomique à Genève</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
+  </head>
+  <body data-i18n-meta="home">
+    <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Aller au contenu principal</a>
+
+    <header class="site-header" data-nav>
+      <div class="site-header__inner">
+        <a class="brand" href="/index.html">
+          <span class="brand__mark">ME</span>
+          <span class="brand__name">Maison Épure</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <a href="/index.html" data-i18n="nav.home" aria-current="page">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitcherLabel">
+            <button type="button" data-lang-switch="fr" aria-pressed="true">FR</button>
+            <span class="lang-switch__sep" aria-hidden="true">·</span>
+            <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          </div>
+
+          <a class="btn btn--primary header-cta" href="/reservations.html" data-i18n="nav.reserveCta"
+            >Réserver une table</a
+          >
+
+          <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav aria-label="Navigation mobile">
+          <a href="/index.html" data-i18n="nav.home" aria-current="page">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <a class="btn btn--primary" href="/reservations.html" data-i18n="nav.reserveCta">Réserver une table</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__media media">
+          <picture>
+            <source srcset="/images/photos/hero-signature-dish.webp" type="image/webp" />
+            <img src="/images/photos/hero-signature-dish.jpg" alt="" data-i18n-attr="alt:home.heroImageAlt" />
+          </picture>
+        </div>
+        <div class="hero__content container">
+          <span class="eyebrow" data-i18n="home.heroEyebrow">Genève</span>
+          <h1 data-i18n="home.heroTitle">Une cuisine épurée, pensée dans l'instant.</h1>
+          <p data-i18n="home.heroSubtitle">
+            Maison Épure propose une cuisine de saison portée par le geste et la matière, au cœur de Genève.
+          </p>
+          <a class="btn btn--primary" href="/reservations.html" data-i18n="home.heroCta">Réserver une table</a>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div class="container intro__grid" data-reveal>
+          <div class="intro__media media media--4-5">
+            <picture>
+              <source srcset="/images/photos/intro-seasonal-vegetables.webp" type="image/webp" />
+              <img src="/images/photos/intro-seasonal-vegetables.jpg" alt="" data-i18n-attr="alt:home.introImageAlt" />
+            </picture>
+          </div>
+          <div class="intro__text">
+            <span class="eyebrow" data-i18n="home.introEyebrow">Philosophie</span>
+            <h2 data-i18n="home.introTitle">L'essentiel, rien de plus.</h2>
+            <p data-i18n="home.introText">
+              Chaque assiette naît d'un dialogue entre le produit et le geste. Nous travaillons avec un nombre
+              restreint de producteurs locaux pour composer une carte courte, vivante, et renouvelée au fil des
+              saisons.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section highlights">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow" data-i18n="home.highlightsEyebrow">Signatures</span>
+            <h2 data-i18n="home.highlightsTitle">Quelques repères de la carte</h2>
+          </div>
+          <div class="highlights__grid">
+            <article class="highlight" data-reveal>
+              <div class="highlight__media media media--1-1">
+                <picture>
+                  <source srcset="/images/photos/highlight-fire-roasted-vegetables.webp" type="image/webp" />
+                  <img
+                    src="/images/photos/highlight-fire-roasted-vegetables.jpg"
+                    alt=""
+                    data-i18n-attr="alt:home.highlight1ImageAlt"
+                  />
+                </picture>
+              </div>
+              <h3 data-i18n="home.highlight1Title">Légumes de saison</h3>
+              <p data-i18n="home.highlight1Text">Cuisinés au feu, servis dans leur simplicité.</p>
+            </article>
+            <article class="highlight" data-reveal>
+              <div class="highlight__media media media--1-1">
+                <picture>
+                  <source srcset="/images/photos/highlight-lake-fish.webp" type="image/webp" />
+                  <img
+                    src="/images/photos/highlight-lake-fish.jpg"
+                    alt=""
+                    data-i18n-attr="alt:home.highlight2ImageAlt"
+                  />
+                </picture>
+              </div>
+              <h3 data-i18n="home.highlight2Title">Poissons du lac</h3>
+              <p data-i18n="home.highlight2Text">Pêche locale, cuisson précise, sauces courtes.</p>
+            </article>
+            <article class="highlight" data-reveal>
+              <div class="highlight__media media media--1-1">
+                <picture>
+                  <source srcset="/images/photos/highlight-dessert.webp" type="image/webp" />
+                  <img
+                    src="/images/photos/highlight-dessert.jpg"
+                    alt=""
+                    data-i18n-attr="alt:home.highlight3ImageAlt"
+                  />
+                </picture>
+              </div>
+              <h3 data-i18n="home.highlight3Title">Pâtisserie de la maison</h3>
+              <p data-i18n="home.highlight3Text">Desserts peu sucrés, textures contrastées.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark story">
+        <div class="container story__grid" data-reveal>
+          <div class="story__text">
+            <span class="eyebrow" data-i18n="home.storyEyebrow">La Maison</span>
+            <h2 data-i18n="home.storyTitle">Une adresse pensée comme un atelier.</h2>
+            <p data-i18n="home.storyText">
+              Entre les mains d'une petite équipe, Maison Épure cultive une cuisine sincère, loin des artifices, où
+              chaque détail — du mobilier à l'assiette — répond à une même exigence de justesse.
+            </p>
+            <a class="btn btn--ghost-light" href="/about.html" data-i18n="home.storyCta">Découvrir la Maison</a>
+          </div>
+          <div class="story__media media media--3-4">
+            <picture>
+              <source srcset="/images/photos/story-table-setting.webp" type="image/webp" />
+              <img src="/images/photos/story-table-setting.jpg" alt="" data-i18n-attr="alt:home.storyImageAlt" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserve-band" data-reveal>
+        <div class="container reserve-band__inner">
+          <h2 data-i18n="home.reserveBandTitle">Une table vous attend.</h2>
+          <p data-i18n="home.reserveBandText">
+            Les places sont limitées chaque soir. Réservez à l'avance pour votre prochaine visite.
+          </p>
+          <a class="btn btn--primary" href="/reservations.html" data-i18n="home.reserveBandCta"
+            >Réserver maintenant</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="brand__mark">ME</span>
+          <p data-i18n="footer.tagline">Cuisine de saison, geste précis.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.navHeading">Navigation</h3>
+          <a href="/index.html" data-i18n="nav.home">Accueil</a>
+          <a href="/menu.html" data-i18n="nav.menu">Carte</a>
+          <a href="/reservations.html" data-i18n="nav.reservations">Réservations</a>
+          <a href="/about.html" data-i18n="nav.about">La Maison</a>
+          <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.infoHeading">Informations</h3>
+          <span data-i18n="footer.addressLabel">Adresse</span>
+          <address data-location-address></address>
+          <span data-i18n="footer.phoneLabel">Téléphone</span>
+          <a data-location-phone href="#"></a>
+          <span data-i18n="footer.emailLabel">Email</span>
+          <a data-location-email href="#"></a>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 data-i18n="footer.hoursHeading">Horaires</h3>
+          <ul data-hours-list></ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p data-i18n="footer.credit">Site conçu à des fins de portfolio — concept fictif.</p>
+        <p>© 2026 Maison Épure — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
